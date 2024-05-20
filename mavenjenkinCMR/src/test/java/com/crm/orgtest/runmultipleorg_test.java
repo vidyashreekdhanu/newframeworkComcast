@@ -25,11 +25,11 @@ import Com.Crm.objectrepositryutility.homepage;
 import Com.Crm.objectrepositryutility.organizationspage;
 import Com.Crm.objectrepositryutility.organizationverificationpage;
 
-public class runmultipleorg_test extends baseclass_2 {
+public class runmultipleorg_test extends Baseclass {
 	@Test(groups = "smoketest")
 	public void createorgtest() throws EncryptedDocumentException, IOException, InterruptedException {
 		// data from excel
-		utility_classObject.gettest().log(Status.INFO, "read data from excel");
+		//utility_classObject.gettest().log(Status.INFO, "read data from excel");
 		excelutility elib = new excelutility();
 		String orgname = elib.getdatafromexcel("sheet4", 1, 2) + jav.getrandomnum();
 		
@@ -37,17 +37,17 @@ public class runmultipleorg_test extends baseclass_2 {
 		
 		Thread.sleep(3000);
 		op.getOrglink().click();
-		utility_classObject.gettest().log(Status.INFO, "navigate to og page");
+	//	utility_classObject.gettest().log(Status.INFO, "navigate to og page");
 		// click on create organization button
 		organizationspage orp = new organizationspage(driver);
 		orp.getcreateorgimg().click();
 		// enter all details
-		utility_classObject.gettest().log(Status.INFO, "navigate to create org page");
+	//	utility_classObject.gettest().log(Status.INFO, "navigate to create org page");
 		CreatingnewOrganization orgn = new CreatingnewOrganization(driver);
 
 		orgn.createorg(orgname);
 		
-		utility_classObject.gettest().log(Status.INFO,orgname+ "navigate to og page");
+		//utility_classObject.gettest().log(Status.INFO,orgname+ "navigate to og page");
 
 		// verify headermsg
 		organizationverificationpage orgv = new organizationverificationpage(driver);
