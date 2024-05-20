@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.crm.contacttest.create_contacttest"/>
-      <class name="com.crm.contacttest.createcontact_withorgtest"/>
+      <class name="com.crm.orgtest.runmultipleorg_test"/>
+      <class name="com.crm.contacttest.runmultiple_contacttest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

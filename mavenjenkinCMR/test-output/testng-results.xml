@@ -1,41 +1,273 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="3" failed="0" skipped="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-20T15:55:14 IST" name="Default suite" finished-at="2024-05-20T15:55:39 IST" duration-ms="24607">
+  <suite started-at="2024-05-20T16:23:15 IST" name="Suite" finished-at="2024-05-20T16:24:52 IST" duration-ms="96577">
     <groups>
+      <group name="regressiontest">
+        <method signature="runmultiple_contacttest.createcontact_withdatetest()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" name="createcontact_withdatetest" class="com.crm.contacttest.runmultiple_contacttest"/>
+        <method signature="runmultiple_contacttest.createcontactwithorg_test()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" name="createcontactwithorg_test" class="com.crm.contacttest.runmultiple_contacttest"/>
+        <method signature="runmultipleorg_test.createorgwithindus_test()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" name="createorgwithindus_test" class="com.crm.orgtest.runmultipleorg_test"/>
+        <method signature="runmultipleorg_test.createorgwithphone_test()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" name="createorgwithphone_test" class="com.crm.orgtest.runmultipleorg_test"/>
+      </group> <!-- regressiontest -->
+      <group name="smoketest">
+        <method signature="runmultiple_contacttest.createcontact_test()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" name="createcontact_test" class="com.crm.contacttest.runmultiple_contacttest"/>
+        <method signature="runmultipleorg_test.createorgtest()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" name="createorgtest" class="com.crm.orgtest.runmultipleorg_test"/>
+      </group> <!-- smoketest -->
     </groups>
-    <test started-at="2024-05-20T15:55:14 IST" name="Default test" finished-at="2024-05-20T15:55:39 IST" duration-ms="24607">
-      <class name="com.crm.orgtest.createorgTest">
-        <test-method is-config="true" signature="confiBS()[pri:0, instance:com.crm.orgtest.createorgTest@6989da5e]" started-at="2024-05-20T15:55:14 IST" name="confiBS" finished-at="2024-05-20T15:55:14 IST" duration-ms="434" status="PASS">
+    <test started-at="2024-05-20T16:23:15 IST" name="Test" finished-at="2024-05-20T16:24:52 IST" duration-ms="96577">
+      <class name="com.crm.orgtest.runmultipleorg_test">
+        <test-method is-config="true" signature="confiBS()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="confiBS" finished-at="2024-05-20T16:23:15 IST" duration-ms="455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- confiBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:com.crm.orgtest.createorgTest@6989da5e]" started-at="2024-05-20T15:55:14 IST" name="configBC" finished-at="2024-05-20T15:55:18 IST" duration-ms="3771" status="PASS">
+        <test-method is-config="true" signature="configBC(java.lang.String)[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="configBC" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1716202395611" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'BROWSER' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\DELL\git\repository3\mavenjenkinCMR\suitebatch.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'BROWSER' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\DELL\git\repository3\mavenjenkinCMR\suitebatch.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:com.crm.orgtest.createorgTest@6989da5e]" started-at="2024-05-20T15:55:18 IST" name="configBM" finished-at="2024-05-20T15:55:23 IST" duration-ms="4497" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="configBM" finished-at="2024-05-20T16:23:15 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="createorgtest()[pri:0, instance:com.crm.orgtest.createorgTest@6989da5e]" started-at="2024-05-20T15:55:23 IST" name="createorgtest" finished-at="2024-05-20T15:55:37 IST" duration-ms="14250" status="PASS">
+        <test-method signature="createorgtest()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="createorgtest" finished-at="2024-05-20T16:23:15 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'BROWSER' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\DELL\git\repository3\mavenjenkinCMR\suitebatch.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'BROWSER' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\DELL\git\repository3\mavenjenkinCMR\suitebatch.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createorgtest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:com.crm.orgtest.createorgTest@6989da5e]" started-at="2024-05-20T15:55:37 IST" name="configAM" finished-at="2024-05-20T15:55:39 IST" duration-ms="1650" status="PASS">
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="configAM" finished-at="2024-05-20T16:23:15 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:com.crm.orgtest.createorgTest@6989da5e]" started-at="2024-05-20T15:55:39 IST" name="configAC" finished-at="2024-05-20T15:55:39 IST" duration-ms="369" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="configBM" finished-at="2024-05-20T16:23:15 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createorgwithindus_test()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="createorgwithindus_test" finished-at="2024-05-20T16:23:15 IST" duration-ms="1" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'BROWSER' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\DELL\git\repository3\mavenjenkinCMR\suitebatch.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'BROWSER' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\DELL\git\repository3\mavenjenkinCMR\suitebatch.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createorgwithindus_test -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="configAM" finished-at="2024-05-20T16:23:15 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="configBM" finished-at="2024-05-20T16:23:15 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createorgwithphone_test()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="createorgwithphone_test" finished-at="2024-05-20T16:23:15 IST" duration-ms="0" status="SKIP">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'BROWSER' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\DELL\git\repository3\mavenjenkinCMR\suitebatch.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'BROWSER' is required by BeforeClass on method configBC but has not been marked @Optional or defined
+in C:\Users\DELL\git\repository3\mavenjenkinCMR\suitebatch.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:684)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:306)
+at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createorgwithphone_test -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="configAM" finished-at="2024-05-20T16:23:15 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:23:15 IST" name="configAC" finished-at="2024-05-20T16:23:15 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="confiAS()[pri:0, instance:com.crm.orgtest.createorgTest@6989da5e]" started-at="2024-05-20T15:55:39 IST" name="confiAS" finished-at="2024-05-20T15:55:39 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="confiAS()[pri:0, instance:com.crm.orgtest.runmultipleorg_test@77c2494c]" started-at="2024-05-20T16:24:52 IST" name="confiAS" finished-at="2024-05-20T16:24:52 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- confiAS -->
-      </class> <!-- com.crm.orgtest.createorgTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.crm.orgtest.runmultipleorg_test -->
+      <class name="com.crm.contacttest.runmultiple_contacttest">
+        <test-method is-config="true" signature="confiBS()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:23:15 IST" name="confiBS" finished-at="2024-05-20T16:23:15 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- confiBS -->
+        <test-method is-config="true" signature="configBC()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:23:15 IST" name="configBC" finished-at="2024-05-20T16:23:19 IST" duration-ms="4075" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:23:19 IST" name="configBM" finished-at="2024-05-20T16:23:24 IST" duration-ms="4505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createcontact_test()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:23:24 IST" name="createcontact_test" finished-at="2024-05-20T16:23:44 IST" duration-ms="20446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createcontact_test -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:23:44 IST" name="configAM" finished-at="2024-05-20T16:23:46 IST" duration-ms="1688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:23:46 IST" name="configBM" finished-at="2024-05-20T16:23:50 IST" duration-ms="3742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createcontact_withdatetest()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:23:50 IST" name="createcontact_withdatetest" finished-at="2024-05-20T16:24:12 IST" duration-ms="21917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createcontact_withdatetest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:24:12 IST" name="configAM" finished-at="2024-05-20T16:24:13 IST" duration-ms="1657" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:24:13 IST" name="configBM" finished-at="2024-05-20T16:24:17 IST" duration-ms="3592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="createcontactwithorg_test()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:24:17 IST" name="createcontactwithorg_test" finished-at="2024-05-20T16:24:50 IST" duration-ms="32598" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createcontactwithorg_test -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:24:50 IST" name="configAM" finished-at="2024-05-20T16:24:51 IST" duration-ms="1718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:24:51 IST" name="configAC" finished-at="2024-05-20T16:24:52 IST" duration-ms="403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+        <test-method is-config="true" signature="confiAS()[pri:0, instance:com.crm.contacttest.runmultiple_contacttest@179ece50]" started-at="2024-05-20T16:24:52 IST" name="confiAS" finished-at="2024-05-20T16:24:52 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- confiAS -->
+      </class> <!-- com.crm.contacttest.runmultiple_contacttest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
