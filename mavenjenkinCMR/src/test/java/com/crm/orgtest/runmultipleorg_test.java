@@ -36,6 +36,7 @@ public class runmultipleorg_test extends Baseclass {
 		homepage op = new homepage(driver);
 		
 		Thread.sleep(3000);
+		
 		op.getOrglink().click();
 	//	utility_classObject.gettest().log(Status.INFO, "navigate to og page");
 		// click on create organization button
